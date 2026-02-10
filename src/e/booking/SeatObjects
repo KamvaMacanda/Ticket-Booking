@@ -1,0 +1,28 @@
+public class SeatObject{ 
+
+public static Seat createSeat(String SeatType)
+{
+    if (Seat ==null){ 
+        return new EconomySeat() ; 
+    } 
+
+    switch(SeatType){ 
+        case"economy" : 
+            return new EconomySeat() ;
+            break ;
+
+         case"business" : 
+             return new BusinessSeat() ; 
+             break ;
+        
+        case "private" : 
+        return new PrivateSeat(); 
+        break ; 
+         
+         default : 
+         return new EconomySeat();
+    }
+}
+
+
+}

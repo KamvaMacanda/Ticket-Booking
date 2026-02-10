@@ -8,9 +8,4 @@ package e.booking;
  *
  * @author kamva
  */
- interface Calculation {
-    
-    //Prices for different seat types  // 
-   
-    
-}
+ public Calculation
