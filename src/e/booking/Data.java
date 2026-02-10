@@ -13,7 +13,7 @@ public class Data {
     private final String Name ;  
     private final String Surname ; 
        private final String TrainType ; 
-        private final double Price ; 
+        private final double BasePrice ; 
           private final String Weekday ; 
        private final String SeatType ;  
       
@@ -21,11 +21,11 @@ public class Data {
        
        
        //Master Constructor  
-       public Data (String Name ,String Surname , String TrainType  , double Price , String SeatType ,String Weekday ){ 
+       public Data (String Name ,String Surname , String TrainType  , double BasePrice , String SeatType ,String Weekday ){ 
            this.Name = Name ; 
            this.Surname= Surname;  
            this.TrainType= TrainType ; 
-           this.Price=Price ; 
+           this.BasePrice=BasePrice ; 
            this.Weekday =Weekday ; 
            this.SeatType=SeatType ; 
            
@@ -57,8 +57,8 @@ public class Data {
            return SeatType ; 
        } 
        
-       public double getPrice (){ 
-           return Price ;
+       public double getBasePrice (){ 
+           return BasePrice ;
        }  
        
 //       public String Seat(){ 
