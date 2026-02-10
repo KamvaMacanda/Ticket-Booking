@@ -29,6 +29,7 @@ public class Seat {
 
     public double getBasePrice() {
             return BasePrice ;
+            
         }
         public void setBasePrice(double BasePrice) {
            if (BasePrice > 0) {

@@ -1,0 +1,7 @@
+public class Presidential extends Seat { 
+    private static final double PresidentialPrice= 500.00; 
+
+    public Presidential (){ 
+        super("Presidential", PresidentialPrice) ; 
+    }
+}
