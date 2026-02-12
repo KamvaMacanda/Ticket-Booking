@@ -81,7 +81,43 @@ private String generateBookingReference(){
         String timestamp = now.format(formatter);
         int random = (int)(Math.random() * 1000);
         return "BK" + timestamp + String.format("%03d", random);  
-} 
+}
+ public String generateReceipt() {
+        StringBuilder receipt = new StringBuilder();
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter dateFormatter = 
+            DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        
+        receipt.append("=== ONLINE BOOKING RECEIPT ===\n\n");
+        receipt.append("Booking Reference: ").append(bookingReference).append("\n");
+        receipt.append("Date: ").append(now.format(dateFormatter)).append("\n\n");
+        
+        // Customer details from Data object
+        receipt.append("--- CUSTOMER DETAILS ---\n");
+        receipt.append("Name: ").append(bookingData.getFullName()).append("\n\n");
+        
+        // Booking details from Data object
+        receipt.append("--- BOOKING DETAILS ---\n");
+        receipt.append("Train Type: ").append(bookingData.getTrainType()).append("\n");
+        receipt.append("Seat Type: ").append(bookingData.getSeatType()).append("\n");
+        receipt.append("Weekday: ").append(bookingData.getWeekday()).append("\n");
+        receipt.append("Seat: ").append(seat.getDescription()).append("\n\n");
+        
+        // Price breakdown
+        receipt.append("--- PRICE BREAKDOWN ---\n");
+        for (String line : priceBreakdown) {
+            receipt.append(line).append("\n");
+        }
+        
+        receipt.append("--------------------------------\n");
+        receipt.append(String.format("TOTAL: R%.2f\n", totalPrice));
+        receipt.append("--------------------------------\n\n");
+        receipt.append("Thank you for booking with us!\n");
+        receipt.append("Please keep this receipt for your records.");
+        
+        return receipt.toString();
+    }
+
 
 
 }
