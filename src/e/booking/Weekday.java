@@ -1,11 +1,13 @@
+
+
 public class WeekdayDiscount implements Pricing{ 
-    private static final doublr DicountRtae=0.10 ; 
+    private static final double DiscountRate=0.10 ; 
 
     // methd to calcculate the dicount price 
 
     @Override
     public double calculatePrice(double BasePrice) {
-        return -(BasePrice *DiscountRtae) ; 
+        return -(BasePrice *DiscountRate) ; 
 
         @Override
         public String getDescription() {

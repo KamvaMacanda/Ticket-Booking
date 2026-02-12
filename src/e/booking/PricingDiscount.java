@@ -1,4 +1,4 @@
-public ingterface PricingDiscount {
+public interface PricingDiscount {
     double calculateDiscountedPrice(double basePrice); 
 
 
