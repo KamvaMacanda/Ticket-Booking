@@ -17,7 +17,7 @@ import e.booking.discounts.WeekdayDiscount;
 
 //class to claculate all booking calculations 
  public class Calculation{  
-
+ 
 
 private Data bookingData;
     private Seat seat;
@@ -40,10 +40,12 @@ public Calculation (String name ,String surname ,String TrainType ,String SeatTy
     this.priceBreakdown=new ArrayList<>();
     CalculatePrice();  
 
-
+    String Fullname ; 
+   Fullname =name  + surname ; 
  } 
 
-private void CalculatePrice(){ 
+public  void CalculatePrice(){ 
+   
 priceBreakdown.add(String.format("Base Price: R%.2f", basePrice)); 
 
 PricingDiscount = 0.0 ; 
@@ -121,3 +123,4 @@ private String generateBookingReference(){
 
 
 }
+ }
